@@ -14,6 +14,20 @@ Its not being made because I don't know how to code but I think it is a good ide
 
 
 
-The OS: It runs a heavily modified, locked-down version of Android (which means standard Android exploitation techniques might apply).
-The Goal: To bypass VTech's security, dump the firmware, and eventually run custom homebrew or emulators.                                                                                                            
+The OS: It runs a heavily modified, locked-down version of Android (which means standard Android exploitation techniques might apply). 
+
+
+
+
+
+
+
+
+The Goal: To bypass VTech's security, dump the firmware, and eventually run custom homebrew or emulators. 
+
+
+
+
+
+
 The Appeal: Emphasize that it's an untouched, obscure console. Many hackers love the challenge of being the "first" to break a specific system.

@@ -1,0 +1,35 @@
+#!/bin/sh
+
+printf '%s\n' 'the bin made it outside the box'
+
+if [ "$#" -eq 0 ]; then
+	image_file=${PAYLOUD_IMAGE:-outside-the-box.png}
+	if [ -f "$image_file" ] && command -v xdg-open >/dev/null 2>&1; then
+		xdg-open "$image_file" >/dev/null 2>&1 &
+	else
+		printf 'Place the picture at %s to display it on Linux.\n' "$image_file"
+	fi
+	exit 0
+fi
+
+if [ "$#" -ne 2 ]; then
+	printf 'Usage: %s SOURCE_DEVICE OUTPUT_IMAGE\n' "$0" >&2
+	exit 2
+fi
+
+source_device=$1
+output_image=$2
+
+if [ ! -b "$source_device" ]; then
+	printf 'Error: %s is not a block device.\n' "$source_device" >&2
+	exit 1
+fi
+
+if [ -e "$output_image" ]; then
+	printf 'Error: output already exists: %s\n' "$output_image" >&2
+	exit 1
+fi
+
+printf 'Creating image of %s at %s...\n' "$source_device" "$output_image"
+dd if="$source_device" of="$output_image" bs=4M status=progress conv=sync,noerror
+# made by copilot as a test 

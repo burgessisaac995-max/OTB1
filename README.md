@@ -27,7 +27,7 @@ The OS: It runs a heavily modified, locked-down version of Android (which means 
 
 
 
-The Goal: To document the InnoTV, preserve its software and storage, and experiment only on hardware and local services that we own or have permission to test.
+The Goal: To document the InnoTV, preserve its software and storage, and experiment only on hardware and local services that we own or have permission to test, and eventually run custom homebrew or emulators. 
 
 
 

@@ -1,0 +1,29 @@
+# OTB1: InnoTV Reverse-Engineering Log 1
+
+## Session 1: System information and file access
+
+**Device:** VTech InnoTV 1836
+
+### System information
+- About-screen identifier recorded: `2.6 JYX9`
+- Need to verify whether this is a firmware version, build identifier, or another system code.
+
+### USB connection
+- Windows identifies the connected device as `InnoTab MAX`.
+- Device interface: Windows Portable Device (WPD).
+- No separate ADB or Android Debug interface appeared in the PowerShell device listing.
+
+### File investigation
+- An HTML document appeared during the investigation.
+- The document's origin and contents have not been verified.
+- A possible security warning or malware concern occurred. The cause is unknown.
+
+### Next steps
+1. Record the exact folder path and filename of the HTML document.
+2. Do not open or execute suspicious files again.
+3. Scan the file with Windows Security.
+4. Determine whether the file came from the InnoTV, an external storage device, or a downloaded webpage.
+5. Continue investigating accessible storage without modifying system files.
+
+### Current objective
+Identify a safe, verifiable way to access the underlying Android interface without assuming ADB is available.
